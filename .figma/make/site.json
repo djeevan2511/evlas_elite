@@ -1,0 +1,12 @@
+{
+  "title": "EVLAS ELITE A Beauty Saloon",
+  "description": "EVLAS ELITE is a women-owned beauty saloon in Khajaguda, Hyderabad offering hair, skin, nails, makeup and bridal services in a warm, refined setting.",
+  "language": "en",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

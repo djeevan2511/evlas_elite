@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400&family=Manrope:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-serif: 'Fraunces', ui-serif, Georgia, serif;
+  --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+
+  --color-ivory: #f6f1ea;
+  --color-champagne: #ece1d1;
+  --color-blush: #f3e3df;
+  --color-rose: #b0736f;
+  --color-rose-deep: #8f5a57;
+  --color-charcoal: #23201d;
+  --color-ink: #34302b;
+  --color-stone: #7d746a;
+  --color-gold: #b0904f;
+  --color-card: #fbf8f3;
+  --color-border: #e3d8c8;
+}
+
+:root {
+  --background: #f6f1ea;
+  --foreground: #23201d;
+  --card: #fbf8f3;
+  --border: #e3d8c8;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Media never forces horizontal scroll on small screens */
+img,
+svg {
+  max-width: 100%;
+}
+
+.font-serif {
+  font-feature-settings: 'liga' 1, 'dlig' 1;
+}
+
+/* Hide scrollbars until scrolling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 999px;
+}
+*:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(35, 32, 29, 0.18);
+}
+
+::selection {
+  background-color: #b0736f;
+  color: #f6f1ea;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out both;
+}
